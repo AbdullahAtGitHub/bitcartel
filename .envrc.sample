@@ -1,0 +1,7 @@
+export PGDATABASE=bitcartel_dev
+export PGUSER=postgres
+export PGPASSWORD=bitcartel_123
+export DATABASE_URL="postgresql://$PGUSER:$PGPASSWORD@localhost:5432/$PGDATABASE?sslmode=disable"
+export GOOSE_MIGRATION_DIR=db/migrations
+export GOOSE_DRIVER=postgres
+export GOOSE_DBSTRING="$DATABASE_URL"
