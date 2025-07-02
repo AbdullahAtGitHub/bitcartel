@@ -1,2 +1,4 @@
 **/*_templ.go
 .envrc
+assets/dist
+node_modules

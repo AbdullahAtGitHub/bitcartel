@@ -13,6 +13,9 @@ func Router() http.Handler {
 	router.Use(middleware.RequestID)
 	router.Use(middleware.Logger)
 
+	fs := http.Dir("./assets/dist")
+	router.Handle("/assets/*", http.StripPrefix("/assets", http.FileServer(fs)))
+
 	pages := PageController()
 	router.Get("/", pages.Index)
 
